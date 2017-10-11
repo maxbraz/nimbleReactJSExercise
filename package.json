@@ -1,0 +1,19 @@
+{
+  "name": "nimblereactjsexercise",
+  "version": "1.0.0",
+  "description": "Nimble Coding Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxbraz/nimbleReactJSExercise.git"
+  },
+  "author": "Max Braz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxbraz/nimbleReactJSExercise/issues"
+  },
+  "homepage": "https://github.com/maxbraz/nimbleReactJSExercise#readme"
+}
