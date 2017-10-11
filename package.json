@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/maxbraz/nimbleReactJSExercise/issues"
   },
-  "homepage": "https://github.com/maxbraz/nimbleReactJSExercise#readme"
+  "homepage": "https://github.com/maxbraz/nimbleReactJSExercise#readme",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
 }
