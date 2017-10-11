@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import List from './components/List.jsx';
+import CandidateList from './components/CandidateList.jsx';
 import data from '../../data.json'
 
 class App extends React.Component {
@@ -16,7 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <MuiThemeProvider>
-        <List candidates={this.state.candidates}/>
+        <CandidateList candidates={this.state.candidates}/>
       </MuiThemeProvider>
     )
   }
