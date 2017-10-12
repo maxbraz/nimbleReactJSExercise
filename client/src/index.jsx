@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
+import FullscreenDialog from 'material-ui-fullscreen-dialog';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import CandidateList from './components/CandidateList.jsx';
-import ProfileTable from './components/ProfileTable.jsx';
+import Profile from './components/Profile.jsx';
 import data from '../../data.json'
 
 class App extends React.Component {
@@ -34,25 +33,17 @@ class App extends React.Component {
   }
 
   render() {
-    const action = [
-      <FlatButton
-        label="Close"
-        primary={true}
-        onClick={this.handleClose}
-      />,
-    ];
-
     return (
       <MuiThemeProvider>
         <CandidateList candidates={this.state.candidates} handleOpenDialog={this.handleOpenDialog} />
-        <Dialog
-          title="Applicant Profile"
-          actions={action}
-          modal={true}
+        <FullscreenDialog
           open={this.state.showProfile}
+          onRequestClose={this.handleClose}
+          title={`${this.state.selectedCandidate.first_name} ${this.state.selectedCandidate.last_name}`}
+          appBarStyle={{ backgroundColor: '#00E3A5' }}
         >
-        <ProfileTable candidate={this.state.selectedCandidate}/>
-        </Dialog>
+        <Profile candidate={this.state.selectedCandidate}/>
+        </FullscreenDialog>
       </MuiThemeProvider>
     )
   }
