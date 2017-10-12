@@ -9,7 +9,7 @@ import {
   TableRowColumn,
 } from 'material-ui/Table';
 
-const CandidateList = ({candidates}) => (
+const CandidateList = ({candidates, handleOpenDialog}) => (
   <Table>
     <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
       <TableRow>
@@ -23,7 +23,7 @@ const CandidateList = ({candidates}) => (
     </TableHeader>
     <TableBody displayRowCheckbox={false}>
         { candidates.map((candidate) =>
-          <CandidateListItem candidate={candidate} key={candidate.id} />
+          <CandidateListItem candidate={candidate} key={candidate.id} handleOpenDialog={handleOpenDialog}/>
         )}
     </TableBody>
   </Table>

@@ -11,7 +11,7 @@ import {
 import FlatButton from 'material-ui/FlatButton';
 import ArrowForward from 'material-ui-icons/ArrowForward';
 
-const CandidateListItem = ({candidate}) => (
+const CandidateListItem = ({candidate, handleOpenDialog}) => (
   <TableRow>
     <TableRowColumn hoverable style={{wordWrap: 'break-word', whiteSpace: 'normal'}}>
       {`${candidate.first_name} ${candidate.last_name}
@@ -31,7 +31,7 @@ const CandidateListItem = ({candidate}) => (
       {candidate.profile.address_city}
     </TableRowColumn>
     <TableRowColumn>
-      <FlatButton >
+      <FlatButton onClick={handleOpenDialog}>
         <ArrowForward hoverColor={'green'}/>
       </FlatButton>
     </TableRowColumn>
