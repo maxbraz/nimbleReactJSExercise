@@ -11,6 +11,7 @@ const styles = {
   },
 };
 
+
 const Profile = ({candidate}) => (
   <div style={styles.root}>
     <List>
